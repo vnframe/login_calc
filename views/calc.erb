@@ -1,16 +1,18 @@
-Welcome! please enter the numbers you would like to calculate.
+Nice to meet you, <%= fname %> <%= lname %>! Please enter the numbers you would like to calculate.
 
 <form method = "post" action = "/calc">
-  <input type = "hidden" name = "password" value = <%= password%>
+  <input type = "hidden" name = "password" value = <%= pass%> >
+  <input type = "hidden" name = "first_name" value = <%= fname %> >
+  <input type = "hidden" name = "last_name" value = <%= lname %> >
   <input type = "number" min = "1" max = "100"  name = "num1">
   <input type = "number" min = "1" max = "100" name = "num2">
   <br>
-  <input type = "radio" name = "cal" value = "add"> Add<br>
+  <input type = "radio" name = "cal" value = "plus" > Add<br>
   <br>
-  <input type = "radio" name = "cal" value = "subt" > Subtract<br>
+  <input type = "radio" name = "cal" value = "-" > Subtract<br>
   <br>
-  <input type = "radio" name = "cal" value = "div" > Divide<br>
+  <input type = "radio" name = "cal" value = "/" > Divide<br>
   <br>
-  <input type = "radio" name = "cal" value = "mult" > Multiply<br>
+  <input type = "radio" name = "cal" value = "x" > Multiply<br>
   <input type = "submit">
 </form>

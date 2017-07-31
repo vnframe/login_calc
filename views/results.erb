@@ -1,0 +1,10 @@
+Your answer is: <%= num1 %> <%= cal %> <%= num2 %> = <%= total %>.
+<br>
+<br>
+If you would like to calculate something else, please click "continue".
+<form method = "post" action = "/results">
+<input type = "hidden" name = "password" value = <%= pass%> >
+<input type = "hidden" name = "first_name" value = <%= fname %> >
+<input type = "hidden" name = "last_name" value = <%= lname %> >
+<input type = "submit" value = "Continue">
+</form>
