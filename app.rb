@@ -9,12 +9,14 @@ post '/home' do
   pass = params[:password]
 
   ary = ["1234", "5678", "3221"]
-  case pass.include?(ary[0]) || pass.include?(ary[1]) || pass.include?(ary[2])
-  when true
-  redirect '/name?password=' + pass
-  when false
-  redirect '/wrong_pass?password=' + pass
+
+   ary.each do |value| #|| pass.include?(ary[1]) || pass.include?(ary[2])
+    case value == pass
+    when true
+    redirect '/name?password=' + pass
+    end
   end
+  redirect '/wrong_pass?password=' + pass
 end
 
 get "/wrong_pass" do
